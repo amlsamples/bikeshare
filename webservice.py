@@ -121,8 +121,8 @@ def run(inputString):
      #impute nans in numerical cols, auto excluding the categorical features as they have been replaced with classes already    
     processedfeatures_imp = meanimputer.transform(processedfeatures)
     
-    #return predicted output    
-    return str(np.int64(np.ceil(model.predict(processedfeatures_imp)[0])))
+    #return predicted output        
+    return json.dumps(str(np.int64(np.ceil(model.predict(processedfeatures_imp)[0]))))
 
 
 #############################################
