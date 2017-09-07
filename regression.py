@@ -184,7 +184,6 @@ if __name__ == '__main__':
     # This code is used to do the visualization
     # it shows up under details for the particular run    
     #############################################
-    import pandas
     from azureml.logging import get_azureml_logger
     run_logger = get_azureml_logger() 
 	
