@@ -136,8 +136,7 @@ if __name__ == '__main__':
 
     #read from test data file    
     fileread = readdata(filepath,testfilename, labelcolumn, excludedcatcolumns, excludednumcolumns)
-    testdata = fileread['data']
-    testlabel = fileread['label']
+    testdata = fileread['data']"    testlabel = fileread['label']
 
     #process the train features
     processedtraindata_imp = processfeatures(traindata, categoricalfeaturestart, categoricalfeaturestartend, testdata)
@@ -187,6 +186,6 @@ if __name__ == '__main__':
     from azureml.logging import get_azureml_logger
     run_logger = get_azureml_logger() 
 	
-    run_logger.log(“Actual”, [testlabel[i] for i in range(len(testlabel))[0::100]])
+    run_logger.log("Actual", [testlabel[i] for i in range(len(testlabel))[0::100]])
 
-    run_logger.log(“Predicted”, [testpredictions[i] for i in range(len(testpredictions))[0::100]])
+    run_logger.log("Predicted", [testpredictions[i] for i in range(len(testpredictions))[0::100]])
