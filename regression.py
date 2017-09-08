@@ -136,7 +136,8 @@ if __name__ == '__main__':
 
     #read from test data file    
     fileread = readdata(filepath,testfilename, labelcolumn, excludedcatcolumns, excludednumcolumns)
-    testdata = fileread['data']"    testlabel = fileread['label']
+    testdata = fileread['data']    
+    testlabel = fileread['label']
 
     #process the train features
     processedtraindata_imp = processfeatures(traindata, categoricalfeaturestart, categoricalfeaturestartend, testdata)
